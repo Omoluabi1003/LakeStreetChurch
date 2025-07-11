@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles from style.css */
+:root {
+    --primary-blue: #1e40af;
+    --secondary-purple: #6d28d9;
+    --accent-cyan: #22d3ee;
+    --bg-dark: #0f172a;
+    --bg-light: #f1f5f9;
+    --text-light: #f8fafc;
+    --text-dark: #1e293b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+    /* Removed color to inherit from section for better legibility */
+}
+
+.navbar {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--accent-cyan);
+    transition: background 0.3s ease;
+}
+
+.navbar-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.95);
+}
+
+.nav-link {
+    color: var(--text-light) !important; /* Tailwind might override this, important might be needed or refactor */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-cyan) !important; /* Tailwind might override this */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--accent-cyan);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+    overflow: hidden;
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Increased opacity for better text legibility */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--secondary-purple), var(--accent-cyan));
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+    color: var(--text-light);
+    padding: 50px 0;
+}
+
+.gallery-img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-cyan);
+    color: var(--text-light); /* This might need adjustment if the form is on a light background */
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan);
+    color: var(--text-light); /* This might need adjustment */
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* High contrast for accessibility */
+/* Note: Tailwind's default text colors are generally good for contrast.
+   The color: inherit rule below might be redundant or could be handled by Tailwind utilities.
+   It's good to review text colors on different backgrounds after Tailwind is applied. */
+a, p, h1, h2, h3, h4, h5, h6 {
+    /* color: inherit; */ /* Commenting this out for now, Tailwind will handle colors. Re-evaluate if needed. */
+    text-decoration: none; /* Tailwind's `<a>` tags are unstyled by default, this might be desired or not */
+}
+
+a:hover {
+    text-decoration: underline; /* This is a good default */
+}
+
+/* Ensure Bootstrap components that might have been styled by style.css still look good or are adapted */
+/* E.g., .navbar-brand, .navbar-toggler-icon, .card-title, .card-text etc. */
+/* If Bootstrap's JavaScript components are used, ensure their styling isn't broken. */
+
+/* It's possible some Bootstrap classes were used in conjunction with style.css.
+   With Tailwind now being the primary utility framework, review index.html to see if
+   Bootstrap classes can be replaced with Tailwind classes for consistency,
+   or if Bootstrap is still needed for specific components.
+   For now, the plan is to keep Bootstrap for its components and grid, and use Tailwind for utilities.
+*/
+
+.navbar-brand.fw-bold { /* Example: Ensure Bootstrap utility like fw-bold still works as expected */
+    color: var(--text-light) !important; /* Overriding potential Tailwind color */
+}
+
+.navbar-toggler { /* Styles for Bootstrap navbar toggler */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ensure card text within various sections has appropriate color */
+#services .card, #staff .card, #events .card {
+    color: var(--text-dark); /* Default card text color on light backgrounds */
+}
+
+#services.section .card { /* Example: card in a dark section */
+     color: var(--text-light); /* Ensure text is light if card itself is dark or transparent on dark bg */
+     background: rgba(255, 255, 255, 0.1); /* Adjust card background for dark sections if needed */
+}
+#staff.section .card {
+    color: var(--text-dark);
+}
+#events.section .card { /* Example: card in a dark section */
+    color: var(--text-light);
+    background: rgba(30, 41, 59, 0.5); /* Darker card for dark sections */
+}
+#events.section .card .card-title, #events.section .card .card-text {
+    color: var(--text-light);
+}
+
+
+/* Contact form specific styles, assuming it's on a light background */
+#contact .form-control {
+    background: rgba(0, 0, 0, 0.05); /* Darker input for light background */
+    border: 1px solid var(--primary-blue);
+    color: var(--text-dark);
+}
+
+#contact .form-control:focus {
+    background: rgba(0, 0, 0, 0.07);
+    border-color: var(--secondary-purple);
+    box-shadow: 0 0 8px var(--secondary-purple);
+    color: var(--text-dark);
+}
+
+#contact .form-label {
+    color: var(--text-dark);
+}
+
+/* Footer link colors */
+footer a {
+    color: var(--text-light) !important; /* Ensure footer links are light */
+}
+footer a:hover {
+    color: var(--accent-cyan) !important;
+}
+
+/* Ensure Bootstrap's grid and components are not negatively impacted.
+   Bootstrap is loaded first, then Tailwind (via this generated sheet), then style.css (which is now merged).
+   The order will be: Bootstrap CSS -> Generated Tailwind CSS (including these custom styles).
+   This means these custom styles and Tailwind utilities can override Bootstrap.
+*/

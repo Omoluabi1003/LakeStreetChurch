@@ -7,17 +7,15 @@
     <meta name="description" content="Lake Street Church of Christ in Stuart, Florida. A modern sanctuary for faith and community.">
     <title>Lake Street Church of Christ</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts: Exo 2, Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Three.js for particle background -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.min.js"></script>
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Generated Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Three.js for particle background (local path placeholder) -->
+    <script src="vendor/three/three.min.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -106,7 +104,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
                     <div class="card">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(2).jpg" class="card-img-top gallery-img" alt="Outreach Ministry">
+                        <img src="images/ministries/outreach.jpg" class="card-img-top gallery-img" alt="Outreach Ministry" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Outreach Ministry</h5>
                             <p class="card-text">Our Outreach Ministry is all about spreading joy and making a difference in our community, because we know that doors open on the hinges of love! With energetic engagement and heartfelt support, we're on a mission to share hope and kindness, creating uplifting connections that empower everyone we meet!</p>
@@ -115,7 +113,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
                     <div class="card">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(5).jpg" class="card-img-top gallery-img" alt="Youth Ministry">
+                        <img src="images/ministries/youth.jpg" class="card-img-top gallery-img" alt="Youth Ministry" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Youth Ministry</h5>
                             <p class="card-text">Our Youth Ministry empowers young individuals to deepen their relationship with God in a welcoming environment designed for exploration and growth. We confidently open doors that swing on the hinges of love, inviting youth to connect, learn, and thrive in their spiritual journey.</p>
@@ -124,7 +122,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
                     <div class="card">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(6).jpg" class="card-img-top gallery-img" alt="Senior Ministry">
+                        <img src="images/ministries/senior.jpg" class="card-img-top gallery-img" alt="Senior Ministry" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Senior Ministry</h5>
                             <p class="card-text">Our Senior Ministry is dedicated to honoring and caring for the seniors in our church family. We provide spiritual support, fellowship, and various activities tailored to the needs and interests of our senior members. Join us as we cherish the wisdom and experience of our senior community.</p>
@@ -142,7 +140,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(6).jpg" class="card-img-top gallery-img" alt="Henry McFadden">
+                        <img src="images/staff/henry_mcfadden.jpg" class="card-img-top gallery-img" alt="Henry McFadden" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Henry McFadden</h5>
                             <p class="card-text">Senior Pastor</p>
@@ -153,7 +151,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(3).jpg" class="card-img-top gallery-img" alt="Willie Gore">
+                        <img src="images/staff/willie_gore.jpg" class="card-img-top gallery-img" alt="Willie Gore" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Willie Gore</h5>
                             <p class="card-text">Education Director</p>
@@ -164,7 +162,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(2).jpg" class="card-img-top gallery-img" alt="Albert Brinkley">
+                        <img src="https://static.wixstatic.com/media/20df12_de9261a50c984a23a8f575391e96ae5c~mv2.jpg/v1/crop/x_504,y_0,w_3024,h_3024/fill/w_920,h_920,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(2).jpg" class="card-img-top gallery-img" alt="Albert Brinkley">
                         <div class="card-body">
                             <h5 class="card-title">Albert Brinkley</h5>
                             <p class="card-text">Outreach Ministry</p>
@@ -174,7 +172,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(4).jpg" class="card-img-top gallery-img" alt="James Glover">
+                        <img src="images/staff/james_glover.jpg" class="card-img-top gallery-img" alt="James Glover" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">James Glover</h5>
                             <p class="card-text">Youth Coordinator</p>
@@ -185,7 +183,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed.jpg" class="card-img-top gallery-img" alt="Willie & Mary Little">
+                        <img src="images/staff/willie_mary_little.jpg" class="card-img-top gallery-img" alt="Willie & Mary Little" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Willie & Mary Little</h5>
                             <p class="card-text">Treasurer</p>
@@ -194,7 +192,7 @@
                 </div>
                 <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
                     <div class="card text-center">
-                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(16).jpg" class="card-img-top gallery-img" alt="Rosalyn Green">
+                        <img src="images/staff/rosalyn_green.jpg" class="card-img-top gallery-img" alt="Rosalyn Green" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Rosalyn Green</h5>
                             <p class="card-text">Administrator</p>
@@ -212,7 +210,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4 fade-in" style="animation-delay: 0.2s;">
                     <div class="card">
-                        <img src="https://static.wixstatic.com/media/20df12_ef80dc11ba1c4658b047f56aba933e36~mv2.jpg/v1/crop/x_0,y_191,w_4032,h_2641/fill/w_2238,h_1466,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(5).jpg" class="card-img-top gallery-img" alt="Brother Henry D. McFadden and Sister Gwen McFadden">
+                        <img src="images/events/minister_celebration.jpg" class="card-img-top gallery-img" alt="Brother Henry D. McFadden and Sister Gwen McFadden" loading="lazy">
                         <div class="card-body p-4">
                             <h5 class="card-title">Minister Celebration</h5>
                             <p class="card-text">Join us on July 12, 2025, at 4:00 PM to celebrate Brother Henry D. McFadden and Sister Gwen McFadden.</p>
@@ -291,17 +289,22 @@
                 </div>
                 <div class="col-md-6 fade-in" style="animation-delay: 0.4s;">
                     <h4 id="prayer-form-title">Prayer Request</h4>
-                    <form aria-labelledby="prayer-form-title" onsubmit="alert('Prayer request submitted!'); return false;">
+                    <form id="prayer-request-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" aria-labelledby="prayer-form-title">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required aria-required="true">
+                            <input type="text" class="form-control" id="name" name="name" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email (Optional)</label>
+                            <input type="email" class="form-control" id="email" name="email">
                         </div>
                         <div class="mb-3">
                             <label for="prayer" class="form-label">Prayer Request</label>
-                            <textarea class="form-control" id="prayer" rows="4" required aria-required="true"></textarea>
+                            <textarea class="form-control" id="prayer" name="prayer" rows="4" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
                     </form>
+                    <div id="form-status" class="mt-3"></div>
                 </div>
             </div>
         </div>
@@ -335,13 +338,13 @@
                 </div>
                 <div class="col-md-4 fade-in" style="animation-delay: 0.4s;">
                     <h5>Connect With Us</h5>
-                    <a href="https://www.facebook.com/Lakestreetcoc/about/" class="text-light me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/Lakestreetcoc/about/" target="_blank" rel="noopener noreferrer" class="text-light me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="text-light me-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="text-light" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <hr style="border-color: var(--accent-cyan);">
-            <p class="text-center mb-0">© 2025 Lake Street Church of Christ. Created by Mansa Design.</p>
+            <p class="text-center mb-0">© 2024 Lake Street Church of Christ. Created by Mansa Design.</p>
             <p class="text-center mb-0">
                 <a href="#" class="text-light me-2">Terms & Conditions</a> |
                 <a href="#" class="text-light ms-2 me-2">Privacy Policy</a> |
