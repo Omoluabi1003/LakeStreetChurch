@@ -1,0 +1,358 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lake Street Church of Christ in Stuart, Florida. A modern sanctuary for faith and community.">
+    <title>Lake Street Church of Christ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Exo 2, Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Three.js for particle background -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.min.js"></script>
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Lake Street Church of Christ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ministries">Ministries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#acts-of-service">Acts of Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#staff">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2" href="#donate">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content container">
+            <h1 class="display-3 fw-bold fade-in">Lake Street Church of Christ</h1>
+            <p class="lead fade-in" style="animation-delay: 0.2s;">Where our doors swing open on the hinges of love, embracing all who seek connection and community.</p>
+            <a href="#services" class="btn btn-primary btn-lg mt-4 fade-in" style="animation-delay: 0.4s;">Plan Your Visit</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">About Lake Street</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 fade-in" style="animation-delay: 0.2s;">
+                    <p>Lake Street Church of Christ in Stuart, Florida, is a vibrant community dedicated to faith, fellowship, and service. Our mission is to spread the love of Christ through worship, education, and outreach.</p>
+                    <p>Join us to experience God's love and become part of our family. We welcome all with open hearts and open doors.</p>
+                    <p>“For where two or three gather in my name, there am I with them.” - Matthew 18:20</p>
+                </div>
+                <div class="col-md-6 fade-in" style="animation-delay: 0.4s;">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/9MdSDiLIHdw" title="Welcome to Lake Street Church" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section" style="background: var(--bg-dark); color: var(--text-light);">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Service Schedule</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Sunday School</h5>
+                        <p class="card-text">Every Sunday at 9:00 AM</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Sunday Worship</h5>
+                        <p class="card-text">Every Sunday at 10:00 AM</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Bible Study</h5>
+                        <p class="card-text">Wednesdays at 7:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section id="ministries" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Our Ministries</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(2).jpg" class="card-img-top gallery-img" alt="Outreach Ministry">
+                        <div class="card-body">
+                            <h5 class="card-title">Outreach Ministry</h5>
+                            <p class="card-text">Our Outreach Ministry is all about spreading joy and making a difference in our community, because we know that doors open on the hinges of love! With energetic engagement and heartfelt support, we're on a mission to share hope and kindness, creating uplifting connections that empower everyone we meet!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(5).jpg" class="card-img-top gallery-img" alt="Youth Ministry">
+                        <div class="card-body">
+                            <h5 class="card-title">Youth Ministry</h5>
+                            <p class="card-text">Our Youth Ministry empowers young individuals to deepen their relationship with God in a welcoming environment designed for exploration and growth. We confidently open doors that swing on the hinges of love, inviting youth to connect, learn, and thrive in their spiritual journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(6).jpg" class="card-img-top gallery-img" alt="Senior Ministry">
+                        <div class="card-body">
+                            <h5 class="card-title">Senior Ministry</h5>
+                            <p class="card-text">Our Senior Ministry is dedicated to honoring and caring for the seniors in our church family. We provide spiritual support, fellowship, and various activities tailored to the needs and interests of our senior members. Join us as we cherish the wisdom and experience of our senior community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="section" style="background: var(--bg-dark); color: var(--text-light);">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Meet Our Leadership</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(6).jpg" class="card-img-top gallery-img" alt="Henry McFadden">
+                        <div class="card-body">
+                            <h5 class="card-title">Henry McFadden</h5>
+                            <p class="card-text">Senior Pastor</p>
+                            <p><i class="fas fa-phone me-2"></i>772-361-3786</p>
+                            <p><i class="fas fa-envelope me-2"></i>hdmf1956@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(3).jpg" class="card-img-top gallery-img" alt="Willie Gore">
+                        <div class="card-body">
+                            <h5 class="card-title">Willie Gore</h5>
+                            <p class="card-text">Education Director</p>
+                            <p><i class="fas fa-phone me-2"></i>772-291-3240</p>
+                            <p><i class="fas fa-envelope me-2"></i>williegorejr@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(2).jpg" class="card-img-top gallery-img" alt="Albert Brinkley">
+                        <div class="card-body">
+                            <h5 class="card-title">Albert Brinkley</h5>
+                            <p class="card-text">Outreach Ministry</p>
+                            <p><i class="fas fa-phone me-2"></i>772-288-3775</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(4).jpg" class="card-img-top gallery-img" alt="James Glover">
+                        <div class="card-body">
+                            <h5 class="card-title">James Glover</h5>
+                            <p class="card-text">Youth Coordinator</p>
+                            <p><i class="fas fa-phone me-2"></i>772-281-8989</p>
+                            <p><i class="fas fa-envelope me-2"></i>mheatfl23@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed.jpg" class="card-img-top gallery-img" alt="Willie & Mary Little">
+                        <div class="card-body">
+                            <h5 class="card-title">Willie & Mary Little</h5>
+                            <p class="card-text">Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card text-center">
+                        <img src="https://www.lakestreetchurchchrist.org/unnamed%20(16).jpg" class="card-img-top gallery-img" alt="Rosalyn Green">
+                        <div class="card-body">
+                            <h5 class="card-title">Rosalyn Green</h5>
+                            <p class="card-text">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section" style="background: var(--bg-dark); color: var(--text-light);">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">News & Events</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card">
+                        <img src="https://static.wixstatic.com/media/20df12_ef80dc11ba1c4658b047f56aba933e36~mv2.jpg/v1/crop/x_0,y_191,w_4032,h_2641/fill/w_2238,h_1466,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(5).jpg" class="card-img-top gallery-img" alt="Brother Henry D. McFadden and Sister Gwen McFadden">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Minister Celebration</h5>
+                            <p class="card-text">Join us on July 12, 2025, at 4:00 PM to celebrate Brother Henry D. McFadden and Sister Gwen McFadden.</p>
+                            <a href="#" class="btn btn-primary">RSVP</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card p-4">
+                        <h5 class="card-title">Summer Youth Camp</h5>
+                        <p class="card-text">August 1-3, 2025, for ages 10-18. Register now!</p>
+                        <a href="#" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acts of Service Section -->
+    <section id="acts-of-service" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Acts of Service</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Community Service Program</h5>
+                        <p class="card-text">Be a part of our dynamic Community Service program, where we enthusiastically feed homeless and participate in inspiring ministry! Together, we build meaningful connections offer support that empowers individuals and brings hope to our community!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Baptism Service</h5>
+                        <p class="card-text">Welcome to our church! We believe in the significance of Baptism as a public declaration of one's faith in Jesus Christ. It's a beautiful symbol of the spiritual cleansing and rebirth. Join us for our Baptism service and take this important step in your spiritual journey.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Communion</h5>
+                        <p class="card-text">At Lake Street Church of Christ, we come together to partake in the sacred act of Communion. Join us as we remember the sacrifice of Jesus through the sharing of bread and wine, symbolizing His body and blood. It's a time of reflection, gratitude, and unity with our church family.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Marriage Services</h5>
+                        <p class="card-text">Celebrate the sacred union of marriage at Lake Street Church of Christ. Our church provides a beautiful and spiritual setting for couples to exchange vows and seek God's blessings for their life together. We offer pre-marital counseling and wedding ceremony services to support couples in this special journey.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.4s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Confession & Repentance</h5>
+                        <p class="card-text">Experience the healing power of confession and repentance in a safe and supportive environment. Our church provides opportunities for individuals to confess their sins, seek forgiveness, and find spiritual renewal. Join us for our confession and repentance sessions to experience God's grace and love.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card text-center p-4">
+                        <h5 class="card-title">Prayer for Healing</h5>
+                        <p class="card-text">Experience the power of prayer and healing at Lake Street Church of Christ. We offer prayer for the sick and anointing with oil, as well as laying on of hands for those seeking physical, emotional, or spiritual healing. Join us for our healing prayer services and find comfort and restoration in God's presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-in">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 fade-in" style="animation-delay: 0.2s;">
+                    <h4>Visit Us</h4>
+                    <p><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i> 345 SE Lake St, Stuart, FL 34994-6201</p>
+                    <p><i class="fas fa-phone me-2" aria-hidden="true"></i> <a href="tel:+17722879532">(772) 287-9532</a></p>
+                    <p><i class="fas fa-envelope me-2" aria-hidden="true"></i> <a href="mailto:Lakestreetcocstuartfl@gmail.com">Lakestreetcocstuartfl@gmail.com</a></p>
+                    <h5>Opening Hours</h5>
+                    <p>Mon - Fri: 8:00 AM - 8:00 PM<br>Saturday: 9:00 AM - 7:00 PM<br>Sunday: 9:00 AM - 8:00 PM</p>
+                </div>
+                <div class="col-md-6 fade-in" style="animation-delay: 0.4s;">
+                    <h4 id="prayer-form-title">Prayer Request</h4>
+                    <form aria-labelledby="prayer-form-title" onsubmit="alert('Prayer request submitted!'); return false;">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="prayer" class="form-label">Prayer Request</label>
+                            <textarea class="form-control" id="prayer" rows="4" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="section text-center" style="background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)); color: var(--text-light);">
+        <div class="container">
+            <h2 class="mb-5 fade-in">Support Our Ministry</h2>
+            <p class="lead fade-in" style="animation-delay: 0.2s;">Your generous donations help us spread the love of Christ and serve the community. Contribute one-time or monthly in amounts like $10, $50, $100, $200, or other.</p>
+            <a href="https://www.paypal.com/donate" class="btn btn-primary btn-lg fade-in" style="animation-delay: 0.4s;">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <h5>Lake Street Church of Christ</h5>
+                    <p>“For where two or three gather in my name, there am I with them.” - Matthew 18:20</p>
+                </div>
+                <div class="col-md-4 fade-in" style="animation-delay: 0.2s;">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light">Home</a></li>
+                        <li><a href="#about" class="text-light">About</a></li>
+                        <li><a href="#services" class="text-light">Services</a></li>
+                        <li><a href="#contact" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 fade-in" style="animation-delay: 0.4s;">
+                    <h5>Connect With Us</h5>
+                    <a href="https://www.facebook.com/Lakestreetcoc/about/" class="text-light me-2" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light me-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr style="border-color: var(--accent-cyan);">
+            <p class="text-center mb-0">© 2025 Lake Street Church of Christ. Created by Mansa Design.</p>
+            <p class="text-center mb-0">
+                <a href="#" class="text-light me-2">Terms & Conditions</a> |
+                <a href="#" class="text-light ms-2 me-2">Privacy Policy</a> |
+                <a href="#" class="text-light ms-2">Accessibility Statement</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Local JS -->
+    <script src="script.js"></script>
+</body>
+</html>
